@@ -35,7 +35,7 @@ local function set_highlights()
 		["@number"] = { link = "Number" },
 		["@parameter"] = { fg = palette.glitch, italic = styles.italic },
 		["@preproc"] = { link = "PreProc" },
-		["@punctuation"] = { fg = palette.subtle }, -- TODO: Confirm color decision
+		["@punctuation"] = { fg = palette.subtle },
 		["@punctuation.bracket"] = { link = "@punctuation" },
 		["@punctuation.delimiter"] = { link = "@punctuation" },
 		["@punctuation.special"] = { link = "@punctuation" },
@@ -104,7 +104,7 @@ local function set_highlights()
 		Folded = { fg = palette.spectrum, bg = groups.panel },
 		IncSearch = { link = "CurSearch" },
 		LineNr = { fg = palette.muted },
-		MatchParen = { fg = palette.proxy, bg = palette.base, blend = 25 }, -- TODO: Confirm color decision
+		MatchParen = { fg = palette.proxy, bg = palette.base, blend = 25 },
 		ModeMsg = { fg = palette.subtle },
 		MoreMsg = { fg = palette.amber },
 		NonText = { fg = palette.muted },
@@ -135,7 +135,7 @@ local function set_highlights()
 		SpellRare = { sp = palette.subtle, undercurl = true },
 		StatusLine = { fg = palette.subtle, bg = groups.panel },
 		StatusLineNC = { fg = palette.muted, bg = groups.panel, blend = 60 },
-		StatusLineTerm = { fg = palette.base, bg = palette.proxy }, -- TODO: Confirm color decision
+		StatusLineTerm = { fg = palette.base, bg = palette.proxy },
 		StatusLineTermNC = { fg = palette.base, bg = palette.proxy, blend = 60 },
 		Substitute = { link = "IncSearch" },
 		TabLine = { fg = palette.subtle, bg = groups.panel },
@@ -192,7 +192,7 @@ local function set_highlights()
 		Identifier = { fg = palette.spectrum },
 		Include = { fg = palette.lavender },
 		Keyword = { fg = palette.lavender },
-		Label = { fg = palette.amber }, -- TODO: Confirm color decision
+		Label = { fg = palette.amber },
 		LspCodeLens = { fg = palette.subtle },
 		LspCodeLensSeparator = { fg = palette.muted },
 		LspInlayHint = { fg = palette.muted, bg = palette.muted, blend = 10 },
@@ -202,18 +202,18 @@ local function set_highlights()
 		Macro = { fg = palette.lavender },
 		Number = { fg = palette.amber_ultra },
 		Operator = { fg = palette.subtle },
-		PreCondit = { fg = palette.mint }, -- TODO: Confirm color decision
+		PreCondit = { fg = palette.mint },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.coral },
 		Special = { fg = palette.peach },
 		SpecialChar = { link = "Special" },
-		SpecialComment = { fg = palette.muted }, -- TODO: Confirm color decision
-		Statement = { fg = palette.coral, bold = styles.bold }, -- Confirm color decision
+		SpecialComment = { fg = palette.muted },
+		Statement = { fg = palette.coral, bold = styles.bold },
 		StorageClass = { fg = palette.peach },
 		String = { fg = palette.cipher },
 		Structure = { fg = palette.mint_dimmed },
 		Tag = { fg = palette.aqua },
-		Todo = { fg = palette.base, bg = palette.proxy, blend = 20 }, -- TODO: Confirm color decision
+		Todo = { fg = palette.base, bg = palette.proxy, blend = 20 },
 		Type = { fg = palette.aqua },
 		TypeDef = { link = "Type" },
 		Underlined = { fg = palette.glitch, underline = true },
@@ -234,7 +234,7 @@ local function set_highlights()
 		htmlLink = { link = "markdownUrl" },
 		htmlTag = { fg = palette.subtle },
 		htmlTagN = { fg = palette.spectrum },
-		htmlTagName = { fg = palette.coral }, -- TODO Confirm color decision
+		htmlTagName = { fg = palette.coral },
 
 		markdownDelimiter = { fg = palette.subtle },
 		markdownH1 = { fg = groups.h1, bold = styles.bold },
@@ -881,7 +881,7 @@ local function set_highlights()
 		if highlight.blend ~= nil and (highlight.blend >= 0 and highlight.blend <= 100) and highlight.bg ~= nil then
 			highlight.bg = utilities.blend(highlight.bg, highlight.blend_on or palette.base, highlight.blend / 100)
 		end
-		vim.api.nvim_set_hl(0, group, highlight)
+		--vim.api.nvim_set_hl(0, group, highlight)
 	end
 
 	--- Terminal
