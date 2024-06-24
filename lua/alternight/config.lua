@@ -1,6 +1,6 @@
----@alias Variant "main" | "moon" | "dawn"
----@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, text: string, love: string, gold: string, rose: string, pine: string, foam: string, iris: string }
----@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "text" | "love" | "gold" | "rose" | "pine" | "foam" | "iris" | "highlight_low" | "highlight_med" | "highlight_high"
+---@alias Variant "main" | "aurora"
+---@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, spectrum: string, proxy: string, whisper: string, quantum: string, cipher: string, mint: string, mint_dimmed: string, coral: string, peach: string, lavender: string, blush: string, glitch: string, aqua: string, amber: string, amber_dark: string, amber_ultra: string }
+---@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "whisper" | "spectrum" | "proxy" | "quantum" | "cipher" | "mint_dimmed" | "coral" | "peach" | "lavender" | "blush" | "glitch" | "aqua" | "amber" | "amber_dark" | "amber_ultra" | "highlight_low" | "highlight_med" | "highlight_high"
 ---@alias Highlight { link: string, inherit: boolean } | { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
 
 local config = {}
@@ -8,13 +8,9 @@ local config = {}
 ---@class Options
 config.options = {
 	---Set the desired variant: "auto" will follow the vim background,
-	---defaulting to `dark_variant` or "main" for dark and "dawn" for light.
+	---defaulting to "main" for dark and "aurora" for light.
 	---@type "auto" | Variant
 	variant = "auto",
-
-	---Set the desired dark variant when `options.variant` is set to "auto".
-	---@type Variant
-	dark_variant = "main",
 
 	---Differentiate between active and inactive windows and panels.
 	dim_inactive_windows = false,
@@ -38,34 +34,34 @@ config.options = {
 	---@type table<string, string | PaletteColor>
 	groups = {
 		border = "muted",
-		link = "iris",
+		link = "quantum",
 		panel = "surface",
 
-		error = "love",
-		hint = "iris",
-		info = "foam",
-		note = "pine",
-		todo = "rose",
-		warn = "gold",
+		error = "blush",
+		hint = "lavender",
+		info = "mint_dimmed",
+		note = "coral",
+		todo = "mint",
+		warn = "amber_dark",
 
-		git_add = "foam",
-		git_change = "rose",
-		git_delete = "love",
-		git_dirty = "rose",
+		git_add = "aqua",
+		git_change = "amber_dark",
+		git_delete = "blush",
+		git_dirty = "amber",
 		git_ignore = "muted",
-		git_merge = "iris",
-		git_rename = "pine",
-		git_stage = "iris",
-		git_text = "rose",
+		git_merge = "quantum",
+		git_rename = "cipher",
+		git_stage = "lavender",
+		git_text = "glitch",
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor
-		h1 = "iris",
-		h2 = "foam",
-		h3 = "rose",
-		h4 = "gold",
-		h5 = "pine",
-		h6 = "foam",
+		h1 = "lavender",
+		h2 = "aqua",
+		h3 = "glitch",
+		h4 = "amber_dark",
+		h5 = "coral",
+		h6 = "mint_dimmed",
 
 		---@deprecated Replaced by `options.highlight_groups["Normal"]`
 		-- background = "base",

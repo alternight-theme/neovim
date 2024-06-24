@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://github.com/rose-pine/rose-pine-theme/raw/main/assets/icon.png" width="80" />
-    <h2 align="center">Rosé Pine for Neovim</h2>
+    <h2 align="center">AlterNight for Neovim</h2>
 </p>
 
 <p align="center">All natural pine, faux fur and a bit of soho vibes for the classy minimalist</p>
@@ -13,31 +13,27 @@
 
 ## Getting started
 
-Install `rose-pine/neovim` using your favourite plugin manager:
+Install `alternight-theme/neovim` using your favourite plugin manager:
 
 **paq-nvim**
 
 ```lua
-{ "rose-pine/neovim", as = "rose-pine" }
+{ "alternight-theme/neovim", as = "alternight" }
 ```
 
 **lazy.nvim**
 
 ```lua
-{ "rose-pine/neovim", name = "rose-pine" }
+{ "alternight-theme/neovim", name = "alternight" }
 ```
 
 ## Gallery
 
-**Rosé Pine**
+**AlterNight**
 
 ![Rosé Pine with Neovim](https://user-images.githubusercontent.com/1973/163921570-0f577baf-3199-4f09-9779-a7eb9238151a.png)
 
-**Rosé Pine Moon**
-
-![Rosé Pine Moon with Neovim](https://user-images.githubusercontent.com/1973/163921620-d3acd0d2-d227-4d28-a5e8-97ff22e56c6d.png)
-
-**Rosé Pine Dawn**
+**AlterNight Aurora**
 
 ![Rosé Pine Dawn with Neovim](https://user-images.githubusercontent.com/1973/163921656-644a2db3-c55c-4e89-9bdd-39cdd7a2681b.png)
 
@@ -46,14 +42,14 @@ Install `rose-pine/neovim` using your favourite plugin manager:
 > [!IMPORTANT]
 > Configure options _before_ setting colorscheme.
 
-Rosé Pine has three variants: main, moon, and dawn. By default, `vim.o.background` is followed, using dawn when light and `dark_variant` when dark.
+AlterNight has two variants: main and aurora. By default, `vim.o.background` is followed, using aurora when light and dark, otherwise.
 
-Colour values accept named colours from the [Rosé Pine palette](https://rosepinetheme.com/palette/ingredients/), e.g. "foam", or valid hex, e.g. "#fa8072".
+Colour values accept named colours from the [AlterNight palette](https://rosepinetheme.com/palette/ingredients/), e.g. "coral", or valid hex, e.g. "#f78c6c".
 
 ```lua
 require("rose-pine").setup({
-    variant = "auto", -- auto, main, moon, or dawn
-    dark_variant = "main", -- main, moon, or dawn
+    variant = "auto", -- auto, main or aurora
+    dark_variant = "main",
     dim_inactive_windows = false,
     extend_background_behind_borders = true,
 
@@ -112,23 +108,21 @@ require("rose-pine").setup({
         -- end
         --
         -- Change palette colour
-        -- if highlight.fg == palette.pine then
-        --     highlight.fg = palette.foam
+        -- if highlight.fg == palette.coral then
+        --     highlight.fg = palette.glitch
         -- end
     end,
 })
 
-vim.cmd("colorscheme rose-pine")
--- vim.cmd("colorscheme rose-pine-main")
--- vim.cmd("colorscheme rose-pine-moon")
--- vim.cmd("colorscheme rose-pine-dawn")
+vim.cmd("colorscheme alternight")
+-- vim.cmd("colorscheme alternight-aurora")
 ```
 
 > [!NOTE]
-> Visit the [wiki](https://github.com/rose-pine/neovim/wiki) for [plugin configurations](https://github.com/rose-pine/neovim/wiki/Plugin-configurations) and [recipes](https://github.com/rose-pine/neovim/wiki/Recipes).
+> Visit the [wiki](https://github.com/alternight-theme/neovim/wiki) for [plugin configurations](https://github.com/alternight-theme/neovim/wiki/Plugin-configurations) and [recipes](https://github.com/alternight-theme/neovim/wiki/Recipes).
 
 ## Contributing
 
-We welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins or [treesitter improvements](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights).
+I welcome and appreciate contributions of any kind. Create an issue or start a discussion for any proposed changes. Pull requests are encouraged for supporting additional plugins or [treesitter improvements](https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md#highlights).
 
-Feel free to update the [wiki](https://github.com/rose-pine/neovim/wiki/) with any [recipes](https://github.com/rose-pine/neovim/wiki/Recipes).
+Feel free to update the [wiki](https://github.com/alternight-theme/neovim/wiki/) with any [recipes](https://github.com/alternight-theme/neovim/wiki/Recipes).

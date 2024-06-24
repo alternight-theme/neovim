@@ -1,11 +1,11 @@
---- Rosé Pine for bufferline
+--- AlterNight for bufferline
 --- https://github.com/akinsho/bufferline.nvim
 ---
 --- @usage
---- local highlights = require("rose-pine.plugins.bufferline")
+--- local highlights = require("alternight.plugins.bufferline")
 --- require("bufferline").setup({ highlights = highlights })
 
-local p = require("rose-pine.palette")
+local p = require("alternight.palette")
 
 return {
 	-- fill = {
@@ -21,7 +21,7 @@ return {
 	-- 	bg = "<color-value-here>",
 	-- },
 	tab_selected = {
-		fg = p.text,
+		fg = p.spectrum,
 		bg = p.overlay,
 	},
 	-- tab_close = {
@@ -45,7 +45,7 @@ return {
 		bg = p.base,
 	},
 	buffer_selected = {
-		fg = p.text,
+		fg = p.spectrum,
 		bg = p.surface,
 		bold = true,
 		italic = true,

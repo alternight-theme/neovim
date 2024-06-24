@@ -1,9 +1,10 @@
 # Changelog
 
-## v2.0.0-next.1
+## v0.0.1-alpha.1
 
 ### What's new
 
+- Configure base color palette
 - Add proper support for `StatusLineTerm` & `StatusLineTermNC`, controlled via `enable.terminal`
 - Add background glow to diagnostic virtual text
 - Add `extend_background_behind_borders`

@@ -1,8 +1,8 @@
---- Rosé Pine for toggleterm
+--- AlterNight for toggleterm
 --- https://github.com/akinsho/toggleterm.nvim
 ---
 --- @usage
---- local highlights = require("rose-pine.plugins.toggleterm")
+--- local highlights = require("alternight.plugins.toggleterm")
 --- require("toggleterm").setup({ highlights = highlights })
 
 return {
