@@ -181,14 +181,14 @@ local function set_highlights()
 		Character = { fg = palette.mint_dimmed },
 		Comment = { fg = palette.whisper, italic = styles.italic },
 		Conditional = { fg = palette.mint },
-		Constant = { fg = palette.coral },
+		Constant = { fg = palette.glitch },
 		Debug = { fg = palette.glitch },
 		Define = { fg = palette.lavender },
 		Delimiter = { fg = palette.subtle },
 		Error = { fg = palette.blush },
 		Exception = { fg = palette.peach },
 		Float = { fg = palette.amber_ultra },
-		Function = { fg = palette.coral },
+		Function = { fg = palette.glitch },
 		Identifier = { fg = palette.spectrum },
 		Include = { fg = palette.lavender },
 		Keyword = { fg = palette.lavender },
@@ -201,7 +201,7 @@ local function set_highlights()
 		LspReferenceWrite = { bg = palette.highlight_med },
 		Macro = { fg = palette.lavender },
 		Number = { fg = palette.amber_ultra },
-		Operator = { fg = palette.subtle },
+		Operator = { fg = palette.spectrum },
 		PreCondit = { fg = palette.mint },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.coral },
@@ -266,7 +266,7 @@ local function set_highlights()
 		mkdURL = { link = "markdownUrl" },
 
 		--- Identifiers
-		["@variable"] = { fg = palette.coral },
+		["@variable"] = { fg = palette.glitch },
 		["@variable.builtin"] = { fg = palette.peach, bold = styles.bold },
 		["@variable.parameter"] = { fg = palette.blush },
 		["@variable.member"] = { fg = palette.quantum },
@@ -283,7 +283,7 @@ local function set_highlights()
 		["@string"] = { link = "String" },
 		-- ["@string.documentation"] = {},
 		["@string.regexp"] = { fg = palette.lavender },
-		["@string.escape"] = { fg = palette.coral },
+		["@string.escape"] = { fg = palette.mint_dimmed },
 		["@string.special"] = { link = "String" },
 		["@string.special.symbol"] = { link = "Identifier" },
 		["@string.special.url"] = { fg = groups.link },
@@ -307,8 +307,8 @@ local function set_highlights()
 		["@property"] = { fg = palette.quantum },
 
 		--- Functions
-		["@function"] = { fg = palette.glitch },
-		["@function.builtin"] = { fg = palette.glitch, bold = styles.bold },
+		["@function"] = { fg = palette.amber },
+		["@function.builtin"] = { fg = palette.amber },
 		-- ["@function.call"] = {},
 		["@function.macro"] = { link = "Function" },
 		["@function.method"] = { fg = palette.glitch },
@@ -321,7 +321,7 @@ local function set_highlights()
 		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
 		-- ["@keyword.function"] = {},
-		["@keyword.operator"] = { fg = palette.subtle },
+		["@keyword.operator"] = { fg = palette.spectrum },
 		["@keyword.import"] = { fg = palette.glitch },
 		["@keyword.storage"] = { fg = palette.coral },
 		["@keyword.repeat"] = { fg = palette.peach, italic = styles.italic },
@@ -334,9 +334,9 @@ local function set_highlights()
 		["@keyword.directive.define"] = { fg = palette.mint_dimmed },
 
 		--- Punctuation
-		["@punctuation.delimiter"] = { fg = palette.subtle },
-		["@punctuation.bracket"] = { fg = palette.subtle },
-		["@punctuation.special"] = { fg = palette.subtle },
+		["@punctuation.delimiter"] = { fg = palette.spectrum },
+		["@punctuation.bracket"] = { fg = palette.spectrum },
+		["@punctuation.special"] = { fg = palette.spectrum },
 
 		--- Comments
 		["@comment"] = { link = "Comment" },
