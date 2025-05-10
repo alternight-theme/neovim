@@ -28,12 +28,12 @@ local function set_highlights()
 		["@conditional"] = { link = "Conditional" },
 		["@field"] = { fg = palette.quantum },
 		["@include"] = { link = "Include" },
-		["@interface"] = { fg = palette.aqua },
+		["@interface"] = { fg = palette.skyware },
 		["@macro"] = { link = "Macro" },
 		["@method"] = { fg = palette.quantum },
 		["@namespace"] = { link = "Include" },
 		["@number"] = { link = "Number" },
-		["@parameter"] = { fg = palette.glitch, italic = styles.italic },
+		["@parameter"] = { fg = palette.skyware, italic = styles.italic },
 		["@preproc"] = { link = "PreProc" },
 		["@punctuation"] = { fg = palette.subtle },
 		["@punctuation.bracket"] = { link = "@punctuation" },
@@ -128,7 +128,7 @@ local function set_highlights()
 		RedrawDebugRecompose = { fg = palette.base, bg = palette.blush },
 		Search = { fg = palette.base, bg = palette.spectrum },
 		SignColumn = { fg = palette.spectrum, bg = "NONE" },
-		SpecialKey = { fg = palette.lavender },
+		SpecialKey = { fg = palette.bitdust },
 		SpellBad = { sp = palette.subtle, undercurl = true },
 		SpellCap = { sp = palette.subtle, undercurl = true },
 		SpellLocal = { sp = palette.subtle, undercurl = true },
@@ -177,21 +177,21 @@ local function set_highlights()
 		DiagnosticVirtualTextInfo = { fg = groups.info, bg = groups.info, blend = 10 },
 		DiagnosticVirtualTextWarn = { fg = groups.warn, bg = groups.warn, blend = 10 },
 
-		Boolean = { fg = palette.aqua },
+		Boolean = { fg = palette.skyware },
 		Character = { fg = palette.mint_dimmed },
 		Comment = { fg = palette.whisper, italic = styles.italic },
-		Conditional = { fg = palette.mint },
+		Conditional = { fg = palette.biolink },
 		Constant = { fg = palette.glitch },
 		Debug = { fg = palette.glitch },
-		Define = { fg = palette.lavender },
+		Define = { fg = palette.bitdust },
 		Delimiter = { fg = palette.subtle },
 		Error = { fg = palette.blush },
 		Exception = { fg = palette.peach },
 		Float = { fg = palette.amber_ultra },
 		Function = { fg = palette.glitch },
 		Identifier = { fg = palette.spectrum },
-		Include = { fg = palette.lavender },
-		Keyword = { fg = palette.lavender },
+		Include = { fg = palette.bitdust },
+		Keyword = { fg = palette.bitdust },
 		Label = { fg = palette.amber },
 		LspCodeLens = { fg = palette.subtle },
 		LspCodeLensSeparator = { fg = palette.muted },
@@ -199,10 +199,10 @@ local function set_highlights()
 		LspReferenceRead = { bg = palette.highlight_med },
 		LspReferenceText = { bg = palette.highlight_med },
 		LspReferenceWrite = { bg = palette.highlight_med },
-		Macro = { fg = palette.lavender },
+		Macro = { fg = palette.bitdust },
 		Number = { fg = palette.amber_ultra },
 		Operator = { fg = palette.spectrum },
-		PreCondit = { fg = palette.mint },
+		PreCondit = { fg = palette.biolink },
 		PreProc = { link = "PreCondit" },
 		Repeat = { fg = palette.coral },
 		Special = { fg = palette.peach },
@@ -212,9 +212,9 @@ local function set_highlights()
 		StorageClass = { fg = palette.peach },
 		String = { fg = palette.cipher },
 		Structure = { fg = palette.mint_dimmed },
-		Tag = { fg = palette.aqua },
+		Tag = { fg = palette.skyware },
 		Todo = { fg = palette.base, bg = palette.proxy, blend = 20 },
-		Type = { fg = palette.aqua },
+		Type = { fg = palette.limewire },
 		TypeDef = { link = "Type" },
 		Underlined = { fg = palette.glitch, underline = true },
 
@@ -222,7 +222,7 @@ local function set_highlights()
 		healthSuccess = { fg = groups.info },
 		healthWarning = { fg = groups.warn },
 
-		htmlArg = { fg = palette.lavender },
+		htmlArg = { fg = palette.bitdust },
 		htmlBold = { bold = styles.bold },
 		htmlEndTag = { fg = palette.subtle },
 		htmlH1 = { link = "markdownH1" },
@@ -268,7 +268,7 @@ local function set_highlights()
 		--- Identifiers
 		["@variable"] = { fg = palette.glitch },
 		["@variable.builtin"] = { fg = palette.peach, bold = styles.bold },
-		["@variable.parameter"] = { fg = palette.blush },
+		["@variable.parameter"] = { fg = palette.skyware, italic = styles.italic },
 		["@variable.member"] = { fg = palette.quantum },
 
 		["@constant"] = { fg = palette.blush },
@@ -282,7 +282,7 @@ local function set_highlights()
 		--- Literals
 		["@string"] = { link = "String" },
 		-- ["@string.documentation"] = {},
-		["@string.regexp"] = { fg = palette.lavender },
+		["@string.regexp"] = { fg = palette.bitdust },
 		["@string.escape"] = { fg = palette.mint_dimmed },
 		["@string.special"] = { link = "String" },
 		["@string.special.symbol"] = { link = "Identifier" },
@@ -298,8 +298,8 @@ local function set_highlights()
 		["@float"] = { link = "Number" },
 
 		--- Types
-		["@type"] = { fg = palette.aqua },
-		["@type.builtin"] = { fg = palette.mint_dimmed, bold = styles.bold },
+		["@type"] = { fg = palette.limewire },
+		["@type.builtin"] = { fg = palette.limewire, bold = styles.bold },
 		-- ["@type.definition"] = {},
 		-- ["@type.qualifier"] = {},
 
@@ -312,7 +312,7 @@ local function set_highlights()
 		-- ["@function.call"] = {},
 		["@function.macro"] = { link = "Function" },
 		["@function.method"] = { fg = palette.glitch },
-		["@function.method.call"] = { fg = palette.lavender },
+		["@function.method.call"] = { fg = palette.bitdust },
 
 		["@constructor"] = { fg = palette.peach, italic = styles.italic },
 		["@operator"] = { link = "Operator" },
@@ -321,17 +321,41 @@ local function set_highlights()
 		["@keyword"] = { link = "Keyword" },
 		-- ["@keyword.coroutine"] = {},
 		-- ["@keyword.function"] = {},
+		["@keyword.as"] = { fg = palette.bitdust },
+		["@keyword.class"] = { fg = palette.bitdust },
+		["@keyword.conditional"] = { fg = palette.biolink },
+		["@keyword.conditional.case"] = { fg = palette.biolink },
+		["@keyword.conditional.default"] = { fg = palette.biolink },
+		["@keyword.conditional.else"] = { fg = palette.biolink },
+		["@keyword.conditional.elseif"] = { fg = palette.biolink },
+		["@keyword.conditional.if"] = { fg = palette.biolink },
+		["@keyword.conditional.switch"] = { fg = palette.biolink },
+		["@keyword.conditional.ternary"] = { fg = palette.biolink },
+		["@keyword.debug"] = { fg = palette.bitdust },
+		["@keyword.directive"] = { fg = palette.bitdust },
+		["@keyword.directive.define"] = { fg = palette.bitdust },
+		["@keyword.directive.export"] = { fg = palette.bitdust },
+		["@keyword.directive.import"] = { fg = palette.bitdust },
+		["@keyword.directive.include"] = { fg = palette.bitdust },
+		["@keyword.directive.pragma"] = { fg = palette.bitdust },
+		["@keyword.exception"] = { fg = palette.bitdust },
+		["@keyword.export"] = { fg = palette.bitdust },
+		["@keyword.from"] = { fg = palette.bitdust },
+		["@keyword.import"] = { fg = palette.bitdust },
+		["@keyword.namespace"] = { fg = palette.bitdust },
 		["@keyword.operator"] = { fg = palette.spectrum },
-		["@keyword.import"] = { fg = palette.glitch },
-		["@keyword.storage"] = { fg = palette.coral },
-		["@keyword.repeat"] = { fg = palette.peach },
-		["@keyword.return"] = { fg = palette.peach },
-		["@keyword.debug"] = { fg = palette.blush },
-		["@keyword.exception"] = { fg = palette.blush },
-		["@keyword.conditional"] = { fg = palette.mint },
-		["@keyword.conditional.ternary"] = { fg = palette.mint },
-		["@keyword.directive"] = { fg = palette.mint_dimmed },
-		["@keyword.directive.define"] = { fg = palette.mint_dimmed },
+		["@keyword.repeat"] = { fg = palette.bitdust },
+		["@keyword.return"] = { fg = palette.bitdust },
+		["@keyword.storage"] = { fg = palette.bitdust },
+		["@keyword.return"] = { fg = palette.bitdust },
+		["@keyword.this"] = { fg = palette.bitdust },
+		["@keyword.throw"] = { fg = palette.bitdust },
+		["@keyword.type"] = { fg = palette.bitdust },
+		["@keyword.var"] = { fg = palette.bitdust },
+		-- ["@keyword.directive.unused"] = { fg = palette.bitdust },
+		-- ["@keyword.directive.unused.import"] = { fg = palette.bitdust },
+		-- ["@keyword.directive.unused.export"] = { fg = palette.bitdust },
+		-- ["@keyword.directive.unused.include"] = { fg = palette.bitdust },
 
 		--- Punctuation
 		["@punctuation.delimiter"] = { fg = palette.spectrum },
@@ -355,7 +379,7 @@ local function set_highlights()
 		["@markup.strikethrough"] = { strikethrough = true },
 		["@markup.underline"] = { underline = true },
 
-		["@markup.heading"] = { fg = palette.aqua, bold = styles.bold },
+		["@markup.heading"] = { fg = palette.skyware, bold = styles.bold },
 
 		["@markup.quote"] = { fg = palette.subtle },
 		["@markup.math"] = { link = "Special" },
@@ -394,7 +418,7 @@ local function set_highlights()
 		["@diff.delta"] = { bg = groups.git_change, blend = 20 },
 
 		["@tag"] = { link = "Tag" },
-		["@tag.attribute"] = { fg = palette.lavender },
+		["@tag.attribute"] = { fg = palette.bitdust },
 		["@tag.delimiter"] = { fg = palette.subtle },
 
 		--- Non-highlighting captures
@@ -454,8 +478,8 @@ local function set_highlights()
 		ModesCopy = { bg = palette.amber_dark },
 		ModesDelete = { bg = palette.blush },
 		ModesInsert = { bg = palette.proxy },
-		ModesReplace = { bg = palette.mint },
-		ModesVisual = { bg = palette.lavender },
+		ModesReplace = { bg = palette.biolink },
+		ModesVisual = { bg = palette.bitdust },
 
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeEmptyFolderName = { fg = palette.muted },
@@ -478,14 +502,14 @@ local function set_highlights()
 		NvimTreeNormal = { link = "Normal" },
 		NvimTreeOpenedFile = { fg = palette.spectrum, bg = palette.overlay },
 		NvimTreeOpenedFolderName = { link = "NvimTreeFolderName" },
-		NvimTreeRootFolder = { fg = palette.aqua, bold = styles.bold },
+		NvimTreeRootFolder = { fg = palette.skyware, bold = styles.bold },
 		NvimTreeSpecialFile = { link = "NvimTreeNormal" },
 		NvimTreeWindowPicker = { link = "StatusLineTerm" },
 
 		-- nvim-neotest/neotest
-		NeotestAdapterName = { fg = palette.lavender },
+		NeotestAdapterName = { fg = palette.bitdust },
 		NeotestBorder = { fg = palette.highlight_med },
-		NeotestDir = { fg = palette.aqua },
+		NeotestDir = { fg = palette.skyware },
 		NeotestExpandMarker = { fg = palette.highlight_med },
 		NeotestFailed = { fg = palette.blush },
 		NeotestFile = { fg = palette.spectrum },
@@ -500,7 +524,7 @@ local function set_highlights()
 		NeotestTarget = { fg = palette.blush },
 		NeotestTest = { fg = palette.amber_dark },
 		NeotestUnknown = { fg = palette.subtle },
-		NeotestWatching = { fg = palette.lavender },
+		NeotestWatching = { fg = palette.bitdust },
 
 		-- nvim-neo-tree/neo-tree.nvim
 		NeoTreeGitAdded = { fg = groups.git_add },
@@ -516,16 +540,16 @@ local function set_highlights()
 		FlashLabel = { fg = palette.base, bg = palette.blush },
 
 		-- folke/which-key.nvim
-		WhichKey = { fg = palette.lavender },
+		WhichKey = { fg = palette.bitdust },
 		WhichKeyDesc = { fg = palette.amber_dark },
 		WhichKeyFloat = { bg = groups.panel },
-		WhichKeyGroup = { fg = palette.aqua },
+		WhichKeyGroup = { fg = palette.skyware },
 		WhichKeySeparator = { fg = palette.subtle },
 		WhichKeyValue = { fg = palette.glitch },
 
 		-- lukas-reineke/indent-blankline.nvim
 		IblIndent = { fg = palette.overlay },
-		IblScope = { fg = palette.aqua },
+		IblScope = { fg = palette.skyware },
 		IblWhitespace = { fg = palette.overlay },
 
 		-- hrsh7th/nvim-cmp
@@ -554,7 +578,7 @@ local function set_highlights()
 		NeogitDiffAddHighlight = { link = "DiffAdd" },
 		NeogitDiffContextHighlight = { bg = palette.surface },
 		NeogitDiffDeleteHighlight = { link = "DiffDelete" },
-		NeogitFilePath = { fg = palette.aqua, italic = styles.italic },
+		NeogitFilePath = { fg = palette.skyware, italic = styles.italic },
 		NeogitHunkHeader = { bg = groups.panel },
 		NeogitHunkHeaderHighlight = { bg = groups.panel },
 
@@ -568,7 +592,7 @@ local function set_highlights()
 		VimwikiHeader6 = { link = "markdownH6" },
 		VimwikiHeaderChar = { fg = palette.subtle },
 		VimwikiLink = { link = "markdownUrl" },
-		VimwikiList = { fg = palette.lavender },
+		VimwikiList = { fg = palette.bitdust },
 		VimwikiNoExistsLink = { fg = palette.blush },
 
 		-- nvim-neorg/neorg
@@ -584,7 +608,7 @@ local function set_highlights()
 		NeorgHeading5Title = { link = "markdownH5" },
 		NeorgHeading6Prefix = { link = "markdownH6Delimiter" },
 		NeorgHeading6Title = { link = "markdownH6" },
-		NeorgMarkerTitle = { fg = palette.aqua, bold = styles.bold },
+		NeorgMarkerTitle = { fg = palette.skyware, bold = styles.bold },
 
 		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
 		DefinitionCount = { fg = palette.glitch },
@@ -594,25 +618,25 @@ local function set_highlights()
 		LspFloatWinNormal = { bg = groups.panel },
 		LspSagaAutoPreview = { fg = palette.subtle },
 		LspSagaCodeActionBorder = make_border(palette.glitch),
-		LspSagaCodeActionContent = { fg = palette.aqua },
+		LspSagaCodeActionContent = { fg = palette.skyware },
 		LspSagaCodeActionTitle = { fg = palette.amber_dark, bold = styles.bold },
 		LspSagaCodeActionTruncateLine = { link = "LspSagaCodeActionBorder" },
 		LspSagaDefPreviewBorder = make_border(),
 		LspSagaDiagnosticBorder = make_border(palette.amber_dark),
-		LspSagaDiagnosticHeader = { fg = palette.aqua, bold = styles.bold },
+		LspSagaDiagnosticHeader = { fg = palette.skyware, bold = styles.bold },
 		LspSagaDiagnosticTruncateLine = { link = "LspSagaDiagnosticBorder" },
 		LspSagaDocTruncateLine = { link = "LspSagaHoverBorder" },
 		LspSagaFinderSelection = { fg = palette.amber_dark },
 		LspSagaHoverBorder = { link = "LspFloatWinBorder" },
 		LspSagaLspFinderBorder = { link = "LspFloatWinBorder" },
-		LspSagaRenameBorder = make_border(palette.lavender),
+		LspSagaRenameBorder = make_border(palette.bitdust),
 		LspSagaRenamePromptPrefix = { fg = palette.blush },
 		LspSagaShTruncateLine = { link = "LspSagaSignatureHelpBorder" },
-		LspSagaSignatureHelpBorder = make_border(palette.aqua),
+		LspSagaSignatureHelpBorder = make_border(palette.skyware),
 		ReferencesCount = { fg = palette.glitch },
 		ReferencesIcon = { fg = palette.glitch },
 		SagaShadow = { bg = palette.overlay },
-		TargetWord = { fg = palette.lavender },
+		TargetWord = { fg = palette.bitdust },
 
 		-- ray-x/lsp_signature.nvim
 		LspSignatureActiveParameter = { bg = palette.overlay },
@@ -643,11 +667,11 @@ local function set_highlights()
 		TelescopePromptPrefix = { fg = palette.subtle },
 		TelescopeSelection = { fg = palette.spectrum, bg = palette.overlay },
 		TelescopeSelectionCaret = { fg = palette.glitch, bg = palette.overlay },
-		TelescopeTitle = { fg = palette.aqua, bold = styles.bold },
+		TelescopeTitle = { fg = palette.skyware, bold = styles.bold },
 
 		-- ibhagwan/fzf-lua
 		FzfLuaNormal = { link = "NormalFloat" },
-		FzfLuaTitle = { fg = palette.aqua, bold = styles.bold },
+		FzfLuaTitle = { fg = palette.skyware, bold = styles.bold },
 		FzfLuaBorder = make_border(),
 		FzfLuaHeaderText = { fg = palette.blush },
 		FzfLuaHeaderBind = { fg = palette.glitch },
@@ -664,9 +688,9 @@ local function set_highlights()
 		NotifyINFOBorder = make_border(groups.info),
 		NotifyINFOIcon = { link = "NotifyINFOTitle" },
 		NotifyINFOTitle = { fg = groups.info },
-		NotifyTRACEBorder = make_border(palette.lavender),
+		NotifyTRACEBorder = make_border(palette.bitdust),
 		NotifyTRACEIcon = { link = "NotifyTRACETitle" },
-		NotifyTRACETitle = { fg = palette.lavender },
+		NotifyTRACETitle = { fg = palette.bitdust },
 		NotifyWARNBorder = make_border(groups.warn),
 		NotifyWARNIcon = { link = "NotifyWARNTitle" },
 		NotifyWARNTitle = { fg = groups.warn },
@@ -676,14 +700,14 @@ local function set_highlights()
 		DapUIBreakpointsDisabledLine = { fg = palette.muted },
 		DapUIBreakpointsInfo = { link = "DapUIThread" },
 		DapUIBreakpointsLine = { link = "DapUIBreakpointsPath" },
-		DapUIBreakpointsPath = { fg = palette.aqua },
+		DapUIBreakpointsPath = { fg = palette.skyware },
 		DapUIDecoration = { link = "DapUIBreakpointsPath" },
 		DapUIFloatBorder = make_border(),
 		DapUIFrameName = { fg = palette.spectrum },
 		DapUILineNumber = { link = "DapUIBreakpointsPath" },
-		DapUIModifiedValue = { fg = palette.aqua, bold = styles.bold },
+		DapUIModifiedValue = { fg = palette.skyware, bold = styles.bold },
 		DapUIScope = { link = "DapUIBreakpointsPath" },
-		DapUISource = { fg = palette.lavender },
+		DapUISource = { fg = palette.bitdust },
 		DapUIStoppedThread = { link = "DapUIBreakpointsPath" },
 		DapUIThread = { fg = palette.amber_dark },
 		DapUIValue = { fg = palette.spectrum },
@@ -694,37 +718,37 @@ local function set_highlights()
 
 		-- glepnir/dashboard-nvim
 		DashboardCenter = { fg = palette.glitch },
-		DashboardFooter = { fg = palette.lavender },
+		DashboardFooter = { fg = palette.bitdust },
 		DashboardHeader = { fg = palette.proxy },
 		DashboardShortcut = { fg = palette.blush },
 
 		-- SmiteshP/nvim-navic
 		NavicIconsArray = { fg = palette.amber_dark },
-		NavicIconsBoolean = { fg = palette.aqua },
-		NavicIconsClass = { fg = palette.aqua },
+		NavicIconsBoolean = { fg = palette.skyware },
+		NavicIconsClass = { fg = palette.skyware },
 		NavicIconsConstant = { fg = palette.coral },
 		NavicIconsConstructor = { fg = palette.peach },
 		NavicIconsEnum = { fg = palette.peach },
 		NavicIconsEnumMember = { fg = palette.quantum },
 		NavicIconsEvent = { fg = palette.amber_dark },
-		NavicIconsField = { fg = palette.aqua },
+		NavicIconsField = { fg = palette.skyware },
 		NavicIconsFile = { fg = palette.muted },
 		NavicIconsFunction = { fg = palette.glitch },
-		NavicIconsInterface = { fg = palette.aqua },
-		NavicIconsKey = { fg = palette.lavender },
-		NavicIconsKeyword = { fg = palette.lavender },
-		NavicIconsMethod = { fg = palette.lavender },
+		NavicIconsInterface = { fg = palette.skyware },
+		NavicIconsKey = { fg = palette.bitdust },
+		NavicIconsKeyword = { fg = palette.bitdust },
+		NavicIconsMethod = { fg = palette.bitdust },
 		NavicIconsModule = { fg = palette.glitch },
 		NavicIconsNamespace = { fg = palette.muted },
-		NavicIconsNull = { fg = palette.aqua },
+		NavicIconsNull = { fg = palette.skyware },
 		NavicIconsNumber = { fg = palette.amber_dark },
 		NavicIconsObject = { fg = palette.quantum },
 		NavicIconsOperator = { fg = palette.subtle },
 		NavicIconsPackage = { fg = palette.muted },
 		NavicIconsProperty = { fg = palette.quantum },
 		NavicIconsString = { fg = palette.cipher },
-		NavicIconsStruct = { fg = palette.mint },
-		NavicIconsTypeParameter = { fg = palette.aqua },
+		NavicIconsStruct = { fg = palette.biolink },
+		NavicIconsTypeParameter = { fg = palette.skyware },
 		NavicIconsVariable = { fg = palette.spectrum },
 		NavicSeparator = { fg = palette.subtle },
 		NavicText = { fg = palette.subtle },
@@ -734,7 +758,7 @@ local function set_highlights()
 
 		-- folke/trouble.nvim
 		TroubleText = { fg = palette.subtle },
-		TroubleCount = { fg = palette.lavender, bg = palette.surface },
+		TroubleCount = { fg = palette.bitdust, bg = palette.surface },
 		TroubleNormal = { fg = palette.spectrum, bg = groups.panel },
 
 		-- echasnovski/mini.clue
@@ -763,16 +787,16 @@ local function set_highlights()
 		MiniStatuslineFilename = { fg = palette.muted, bg = palette.surface },
 		MiniStatuslineInactive = { link = "MiniStatuslineFilename" },
 		MiniStatuslineModeCommand = { fg = palette.base, bg = palette.blush, bold = styles.bold },
-		MiniStatuslineModeInsert = { fg = palette.base, bg = palette.aqua, bold = styles.bold },
+		MiniStatuslineModeInsert = { fg = palette.base, bg = palette.skyware, bold = styles.bold },
 		MiniStatuslineModeNormal = { fg = palette.base, bg = palette.glitch, bold = styles.bold },
 		MiniStatuslineModeOther = { fg = palette.base, bg = palette.glitch, bold = styles.bold },
 		MiniStatuslineModeReplace = { fg = palette.base, bg = palette.amber_dark, bold = styles.bold },
-		MiniStatuslineModeVisual = { fg = palette.base, bg = palette.lavender, bold = styles.bold },
+		MiniStatuslineModeVisual = { fg = palette.base, bg = palette.bitdust, bold = styles.bold },
 
 		-- goolord/alpha-nvim
 		AlphaButtons = { fg = palette.proxy },
 		AlphaFooter = { fg = palette.amber_dark },
-		AlphaHeader = { fg = palette.aqua },
+		AlphaHeader = { fg = palette.skyware },
 		AlphaShortcut = { fg = palette.glitch },
 
 		-- github/copilot.vim
@@ -799,7 +823,7 @@ local function set_highlights()
 		Normal = { fg = palette.spectrum, bg = "NONE" },
 		NormalNC = { fg = palette.spectrum, bg = config.options.dim_inactive_windows and palette._nc or "NONE" },
 		Pmenu = { fg = palette.subtle, bg = "NONE" },
-		PmenuKind = { fg = palette.aqua, bg = "NONE" },
+		PmenuKind = { fg = palette.skyware, bg = "NONE" },
 		SignColumn = { fg = palette.spectrum, bg = "NONE" },
 		StatusLine = { fg = palette.subtle, bg = "NONE" },
 		StatusLineNC = { fg = palette.muted, bg = "NONE" },
@@ -819,7 +843,7 @@ local function set_highlights()
 		WhichKeyFloat = { bg = "NONE" },
 
 		IblIndent = { fg = palette.overlay, bg = "NONE" },
-		IblScope = { fg = palette.aqua, bg = "NONE" },
+		IblScope = { fg = palette.skyware, bg = "NONE" },
 		IblWhitespace = { fg = palette.overlay, bg = "NONE" },
 
 		MiniClueTitle = { bg = "NONE", bold = styles.bold },
@@ -889,20 +913,20 @@ local function set_highlights()
 	--- Terminal
 	if config.options.enable.terminal then
 		vim.g.terminal_color_0 = palette.overlay -- black
-		vim.g.terminal_color_8 = palette.subtle -- bright black
 		vim.g.terminal_color_1 = palette.blush -- red
-		vim.g.terminal_color_9 = palette.glitch -- bright red
 		vim.g.terminal_color_2 = palette.cipher -- green
-		vim.g.terminal_color_10 = palette.mint -- bright green
 		vim.g.terminal_color_3 = palette.amber_dark -- yellow
-		vim.g.terminal_color_11 = palette.amber -- bright yellow
 		vim.g.terminal_color_4 = palette.quantum -- blue
-		vim.g.terminal_color_12 = palette.quantum -- bright blue
-		vim.g.terminal_color_5 = palette.lavender -- magenta
-		vim.g.terminal_color_13 = palette.lavender -- bright magenta
-		vim.g.terminal_color_6 = palette.aqua -- cyan
-		vim.g.terminal_color_14 = palette.aqua -- bright cyan
+		vim.g.terminal_color_5 = palette.bitdust -- magenta
+		vim.g.terminal_color_6 = palette.skyware -- cyan
 		vim.g.terminal_color_7 = palette.spectrum -- white
+		vim.g.terminal_color_8 = palette.subtle -- bright black
+		vim.g.terminal_color_9 = palette.glitch -- bright red
+		vim.g.terminal_color_10 = palette.biolink -- bright green
+		vim.g.terminal_color_11 = palette.amber -- bright yellow
+		vim.g.terminal_color_12 = palette.quantum -- bright blue
+		vim.g.terminal_color_13 = palette.bitdust -- bright magenta
+		vim.g.terminal_color_14 = palette.skyware -- bright cyan
 		vim.g.terminal_color_15 = palette.spectrum -- bright white
 
 		-- Support StatusLineTerm & StatusLineTermNC from vim

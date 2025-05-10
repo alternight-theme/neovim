@@ -1,6 +1,6 @@
 ---@alias Variant "main" | "aurora"
----@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, spectrum: string, proxy: string, whisper: string, quantum: string, cipher: string, mint: string, mint_dimmed: string, coral: string, peach: string, lavender: string, blush: string, glitch: string, aqua: string, amber: string, amber_dark: string, amber_ultra: string }
----@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "whisper" | "spectrum" | "proxy" | "quantum" | "cipher" | "mint_dimmed" | "coral" | "peach" | "lavender" | "blush" | "glitch" | "aqua" | "amber" | "amber_dark" | "amber_ultra" | "highlight_low" | "highlight_med" | "highlight_high"
+---@alias Palette { base: string, surface: string, overlay: string, muted: string, subtle: string, spectrum: string, proxy: string, whisper: string, biolink: string, bitdust: string, limewire: string, skyware: string, quantum: string, cipher: string, mint_dimmed: string, coral: string, peach: string, blush: string, glitch: string, aqua: string, amber: string, amber_dark: string, amber_ultra: string }
+---@alias PaletteColor "base" | "surface" | "overlay" | "muted" | "subtle" | "whisper" | "spectrum" | "proxy" | "biolink" | "bitdust" | "limewire" | "skyware" | "quantum" | "cipher" | "mint_dimmed" | "coral" | "peach" | "blush" | "glitch" | "aqua" | "amber" | "amber_dark" | "amber_ultra" | "highlight_low" | "highlight_med" | "highlight_high"
 ---@alias Highlight { link: string, inherit: boolean } | { fg: string, bg: string, sp: string, bold: boolean, italic: boolean, undercurl: boolean, underline: boolean, underdouble: boolean, underdotted: boolean, underdashed: boolean, strikethrough: boolean, inherit: boolean }
 
 local config = {}
@@ -38,25 +38,25 @@ config.options = {
 		panel = "surface",
 
 		error = "blush",
-		hint = "lavender",
-		info = "mint_dimmed",
+		hint = "bitdust",
+		info = "quantum",
 		note = "coral",
-		todo = "mint",
+		todo = "limewire",
 		warn = "amber_dark",
 
-		git_add = "aqua",
+		git_add = "skyware",
 		git_change = "amber_dark",
 		git_delete = "blush",
 		git_dirty = "amber",
 		git_ignore = "muted",
 		git_merge = "quantum",
 		git_rename = "cipher",
-		git_stage = "lavender",
+		git_stage = "bitdust",
 		git_text = "glitch",
 		git_untracked = "subtle",
 
 		---@type string | PaletteColor
-		h1 = "lavender",
+		h1 = "bitdust",
 		h2 = "aqua",
 		h3 = "glitch",
 		h4 = "amber_dark",

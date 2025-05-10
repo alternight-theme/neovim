@@ -7,4 +7,4 @@
 
 local p = require("alternight.palette")
 
-return { p.coral, p.glitch, p.lavender }
+return { p.coral, p.glitch, p.bitdust }

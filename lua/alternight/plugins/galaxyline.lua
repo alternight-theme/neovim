@@ -11,10 +11,10 @@ return {
 	fg = p.spectrum,
 	fg_alt = p.subtle,
 	yellow = p.amber,
-	cyan = p.aqua,
+	cyan = p.skyware,
 	green = p.cipher,
 	orange = p.coral,
-	magenta = p.lavender,
+	magenta = p.bitdust,
 	blue = p.quantum,
 	red = p.blush,
 }
